@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NBFAHRINADI Website</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,41 +12,42 @@
       rel="stylesheet"
     />
   </head>
+  <script src="script.js"></script>
   <body>
     <div class="wrapper">
-      <!-- NAVBAR -->
-      <section class="NAVBAR">
+      <!-- navbar -->
+      <nav class="navbar" id="navbar">
         <div class="inner-wrapper">
           <div class="logo">
-            <a href="#"
-              ><img src="asset/nb-logo-icon.png" alt="" srcset=""
-            /></a>
+            <a href="#"><img src="asset/logo-nb.png" alt="" srcset="" /></a>
           </div>
           <ul class="menubar">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <div class="cta">
+          <div class="cta-navbar">
             <a href="#">Hire Me</a>
           </div>
         </div>
-      </section>
-      <!-- HERO -->
-      <section class="HERO">
+      </nav>
+      <!-- hero -->
+      <section class="hero" id="hero">
         <div class="inner-wrapper">
           <div class="left-content">
-            <div class="big-title">
-              Hello! I'm Nabil, A UI/UX Designer | Graphic Designer | Software
-              Engineer
-            </div>
-            <p class="deskripsi">
+            <h1 class="big-title">
+              Hello! <strong>I'm Nabil</strong>, A
+              <span class="bold">UI/UX Designer</span> |
+              <span class="bold">Graphic Designer</span> |
+              <span class="bold">Software Engineer</span>
+            </h1>
+            <p class="description">
               I have 3 years of working experience as a UI/UX Designer. I can
               help you in designing a product with a good experience
             </p>
             <div class="cta-hero">
-              <a href="#">Contact Me</a>
+              <a href="#">Contact Me!</a>
             </div>
           </div>
           <div class="right-content">
@@ -56,97 +57,164 @@
           </div>
         </div>
       </section>
-      <!-- ABOUT -->
-      <section class="ABOUT">
-        <div class="left-content">
-          <div class="judul">
-            <h1>
-              Designing with heart to create smooth, enjoyable user experiences
-              and interfaces
-            </h1>
-          </div>
-          <div class="isi">
-            <p>
-              I approach design with heart, blending empathy, creativity, and
-              strategy to create digital experiences that are not only beautiful
-              but also intuitive and enjoyable to use. Whether it’s a mobile
-              app, website, or product dashboard, I focus on what truly matters
-              — the people who use it.
-            </p>
-          </div>
-        </div>
-        <div class="right-content">
-          <div class="service-box">
-            <div class="title-service-box">
-              <i class="wireframe">
-                <img src="/asset/icon-wireframe.png" alt="" />
-              </i>
-              <div>
-                <h3>Wireframe</h3>
-              </div>
+      <!-- about -->
+      <section class="about" id="about">
+        <div class="inner-wrapper">
+          <div class="left-content">
+            <div class="judul">
+              <h2>
+                Designing with heart to create clean & enjoyable user
+                experiences and interfaces
+              </h2>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Facilisis ultricies
-              pharetra ut tellus purus eget orci massa.
-            </p>
-          </div>
-          <div class="service-box">
-            <div class="title-service-box">
-              <i class="design">
-                <img src="/asset/icon-design.png" alt="" />
-              </i>
-              <div>
-                <h3>Wireframe</h3>
-              </div>
+            <div class="isi">
+              <p>
+                I approach design with heart, blending empathy, creativity, and
+                strategy to create digital experiences that are not only
+                beautiful but also intuitive and enjoyable to use. Whether it’s
+                a mobile app, website, or product dashboard, I focus on what
+                truly matters — the people who use it.
+              </p>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Facilisis ultricies
-              pharetra ut tellus purus eget orci massa.
-            </p>
           </div>
-          <div class="service-box">
-            <div class="title-service-box">
-              <i class="website">
-                <img src="/asset/icon-website.png" alt="" />
-              </i>
-              <div>
-                <h3>Wireframe</h3>
+          <div class="right-content">
+            <div class="service-box">
+              <div class="title-service-box">
+                <!-- icon wireframe -->
+                <i class="icon-service-box">
+                  <img src="/asset/icon-wireframe.png" alt="" />
+                </i>
+                <div>
+                  <h3>Wireframe</h3>
+                </div>
               </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Facilisis ultricies
+                pharetra ut tellus purus eget orci massa.
+              </p>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Facilisis ultricies
-              pharetra ut tellus purus eget orci massa.
-            </p>
+            <div class="service-box">
+              <div class="title-service-box">
+                <!-- icon design -->
+                <i class="icon-service-box">
+                  <img src="/asset/icon-design.png" alt="" />
+                </i>
+                <div>
+                  <h3>Wireframe</h3>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Facilisis ultricies
+                pharetra ut tellus purus eget orci massa.
+              </p>
+            </div>
+            <div class="service-box">
+              <div class="title-service-box">
+                <!-- icon website -->
+                <i class="icon-service-box">
+                  <img src="/asset/icon-website.png" alt="" />
+                </i>
+                <div>
+                  <h3>Wireframe</h3>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Facilisis ultricies
+                pharetra ut tellus purus eget orci massa.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <!-- PROJECT -->
-      <section class="PROJECT">
+      <!-- project -->
+      <section class="project" id="project">
         <div class="inner-wrapper">
           <div class="card">
             <div class="title-project">
-              <div class="thumbnail"></div>
-              <h2>Laboratory Information System</h2>
+              <img
+                class="thumbnail"
+                src="/asset/thumbnail-adamlis.png"
+                alt=""
+              />
+              <h3>Laboratory Information System</h3>
             </div>
             <div class="cta-project">
-              <a href="#">View Project</a>
+              <a
+                href="https://www.figma.com/design/XaEYbof0rgaoQFLNRDIrrE/AdamLIS-LIS-V3?m=auto&t=JSNsjgMKPRiPVSbr-6"
+                target="_blank"
+                >View project</a
+              >
             </div>
           </div>
           <div class="card">
             <div class="title-project">
-              <div class="thumbnail"></div>
-              <h2>Mobile App Expertise</h2>
+              <img
+                class="thumbnail"
+                src="/asset/thumbnail-adamexpertise.png"
+                alt=""
+              />
+              <h3>Mobile App Expertise</h3>
             </div>
             <div class="cta-project">
-              <a href="#">View Project</a>
+              <a
+                href="https://www.figma.com/design/SpG1HXnth4ZbBDR9APxen4/AdamExpertise-V2?m=auto&t=JSNsjgMKPRiPVSbr-6"
+                target="_blank"
+                >View project</a
+              >
             </div>
           </div>
         </div>
       </section>
       <!-- TOOLS -->
-      <section class="TOOLS"></section>
+      <section id="tools" class="tools">
+        <div class="tools-title">
+          <h2>Tools</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="tools-inner-wrapper">
+          <div class="tool-card">
+            <img src="asset/card-icon-figma.png" alt="Figma" />
+          </div>
+          <div class="tool-card">
+            <img src="asset/card-icon-html.png" alt="CSS3" />
+          </div>
+          <div class="tool-card">
+            <img src="asset/card-icon-css.png" alt="HTML5" />
+          </div>
+          <div class="tool-card">
+            <img src="asset/card-icon-js.png" alt="JavaScript" />
+          </div>
+        </div>
+      </section>
       <!-- FOOTER -->
-      <section class="FOOTER"></section>
+      <footer class="footer">
+        <div class="footer-inner-wrapper">
+          <div class="footer-left">
+            <div class="footer-title">
+              <h2>Nabil Fahri</h2>
+              <div class="underline"></div>
+            </div>
+            <div class="social-icons">
+              <a href="#"><img src="asset/icon-gmail.png" alt="Email" /></a>
+              <a href="#"
+                ><img src="asset/icon-linkedin.png" alt="LinkedIn"
+              /></a>
+              <a href="#"><img src="asset/icon-insta.png" alt="Instagram" /></a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+      </footer>
     </div>
   </body>
 </html>

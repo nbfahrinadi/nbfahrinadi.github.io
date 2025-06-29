@@ -1,3 +1,411 @@
+*,
+html,
 body {
-  background: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 48px; /* Ukuran font besar */
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 40px; /* Ukuran font besar */
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 33px; /* Ukuran font besar */
+  font-weight: 800;
+}
+
+.wrapper {
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 100px; /* Padding untuk ruang di kiri dan kanan */
+  position: sticky; /* Agar navbar tetap di atas saat scroll */
+  top: 0; /* Posisi tetap di atas */
+  z-index: 1000; /* Biar tetap di atas elemen lain */
+  transition: box-shadow 0.3s ease; /* Transisi halus untuk bayangan */
+  background-color: white; /* Warna latar belakang putih */
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menubar {
+  display: flex;
+  list-style-type: none;
+}
+
+.logo img {
+  width: 80px; /* Ukuran logo */
+  height: auto; /* Mempertahankan rasio aspek */
+}
+
+.navbar .menubar li a {
+  display: block;
+  margin: 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: gray;
+  transition: color 0.3s ease; /* Transisi halus untuk perubahan warna */
+  font-size: 20px;
+}
+
+.navbar .menubar li a:hover {
+  color: black; /*berubah jika dihover*/
+  font-weight: 600; /* Menebalkan teks saat dihover */
+  transition: all 0.5s ease; /* Transisi halus */
+}
+
+.cta-navbar a {
+  display: inline-block; /* Membuat link sebagai blok */
+  padding: 20px 40px; /* Padding untuk tombol */
+  font-size: 16px; /* Ukuran font */
+  background-color: white; /* Warna putih */
+  color: black; /* Teks hitam */
+  text-decoration: none; /* Menghapus garis bawah */
+  border-radius: 10px; /* Sudut melengkung */
+  border: 2px solid black;
+  transition: background-color 0.3s ease; /* Transisi halus */
+}
+
+.cta-navbar a:hover {
+  background-color: black; /* Warna hitam gelap saat dihover */
+  color: white; /* Teks putih saat dihover */
+}
+
+.hero {
+  width: 100%;
+  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
+  scroll-margin-top: 100px;
+}
+
+.hero .inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px; /* Jarak antar elemen */
+}
+
+.hero .left-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Jarak antar elemen di dalam konten kiri */
+}
+
+.big-title {
+  /* Tebal */
+  /* line-height: 1.2; Jarak antar baris */
+  color: black; /* Warna teks hitam */
+}
+
+.big-title strong {
+  font-weight: 800; /* bold untuk nama */
+}
+
+.big-title .bold {
+  font-weight: 800; /* lebih bold dari teks biasa */
+}
+
+.description {
+  font-size: 20px; /* Ukuran font deskripsi */
+  color: gray; /* Warna teks abu-abu */
+  margin-top: 10px; /* Jarak atas */
+}
+
+.cta-hero a {
+  display: inline-block; /* Membuat link sebagai blok */
+  padding: 20px 40px; /* Padding untuk tombol */
+  font-size: 16px; /* Ukuran font */
+  background-color: black; /* Warna putih */
+  color: white; /* Teks hitam */
+  text-decoration: none; /* Menghapus garis bawah */
+  border-radius: 10px; /* Sudut melengkung */
+  border: 2px solid black;
+  transition: background-color 0.3s ease; /* Transisi halus */
+}
+
+.cta-hero a:hover {
+  background-color: white; /* Warna hitam gelap saat dihover */
+  color: black; /* Teks putih saat dihover */
+}
+
+.about {
+  width: 100%;
+  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
+  background-color: black;
+  color: white;
+  scroll-margin-top: 100px;
+}
+
+.about .inner-wrapper {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px; /* Jarak antar elemen */
+}
+
+.about .left-content {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Jarak antar elemen di dalam konten kiri */
+}
+
+.about .right-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Jarak antar elemen di dalam konten kanan */
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title-service-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Jarak antar elemen di dalam konten kiri */
+}
+
+.icon-service-box {
+  width: 48px; /* Ukuran ikon */
+  height: 48px; /* Ukuran ikon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  width: 100%; /*agar full strech */
+  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
+  scroll-margin-top: 100px; /*Agar tidak tertutup navbar*/
+}
+
+.project .inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px; /* Jarak antar elemen */
+}
+
+.project .card {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* height: 250px; */
+  display: flex;
+  /* flex-direction: row; */
+  gap: 20px; /* Jarak antar elemen di dalam konten kiri */
+  background-color: black; /* Warna latar belakang hitam */
+  color: white;
+  padding: 40px; /* Padding untuk ruang di dalam card */
+  border-radius: 20px; /* Sudut melengkung */
+}
+
+.title-project {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px; /* Jarak antar elemen di dalam konten kiri */
+}
+
+.project .thumbnail {
+  width: 300px;
+  height: 150px;
+  background-size: cover; /* Gambar menutupi seluruh area
+  /* background-position: center; Pusatkan gambar */
+  background-color: gray;
+  border-radius: 15px;
+}
+
+.cta-project a {
+  display: inline-block; /* Membuat link sebagai blok */
+  padding: 20px 40px; /* Padding untuk tombol */
+  font-size: 16px; /* Ukuran font */
+  background-color: white; /* Warna putih */
+  color: black; /* Teks hitam */
+  text-decoration: none; /* Menghapus garis bawah */
+  border-radius: 10px; /* Sudut melengkung */
+  transition: background-color 0.3s ease; /* Transisi halus */
+}
+
+.cta-project a:hover {
+  background-color: #b4b4b4; /* Warna hitam gelap saat dihover */
+  /* color: white; Teks saat dihover */
+}
+
+.tools {
+  width: 100%; /*agar full strech */
+  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
+  scroll-margin-top: 100px; /*Agar tidak tertutup navbar*/
+  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
+  background-color: #000; /* hitam */
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tools-title {
+  text-align: left;
+}
+
+.underline {
+  width: 120px;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 30px;
+  margin-left: 0; /* biar tetap rata kiri */
+  border-radius: 50px; /* Sudut melengkung */
+}
+
+.tools-inner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 60px; */
+}
+
+.tool-card {
+  background-color: #444;
+  padding: 30px;
+  border-radius: 15px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: scale(1.05);
+}
+
+.tool-card img {
+  max-width: 220px;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.footer {
+  width: 100%; /*agar full strech */
+  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Jarak antar elemen */
+  /* display: flex; */
+  /* align-items: flex-start; Rata kiri */
+  /* position: relative; Agar footer tetap di bawah konten */
+}
+
+.footer-inner-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: flex-start; Rata kiri */
+  /* gap: 100px; Jarak antar elemen */
+}
+
+.footer-left {
+  width: 100%;
+}
+
+.footer-title .underline {
+  width: 120px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 30px;
+  margin-left: 0; /* biar tetap rata kiri */
+  border-radius: 50px; /* Sudut melengkung */
+  margin-bottom: 60px;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer .social-icons a {
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: background 0.3s ease; */
+}
+
+.footer .social-icons img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease;
+}
+
+.footer .social-icons a:hover {
+  background-color: #b4b4b4;
+  /* color: white; */
+}
+
+.footer-nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.footer-nav a a:hover {
+  color: black; /*berubah jika dihover*/
+  font-weight: 600; /* Menebalkan teks saat dihover */
+  transition: all 0.5s ease; /* Transisi halus */
+}
+
+.footer-nav a:hover {
+  color: black;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  /* border: none;
+  border-top: 2px solid black;
+  margin-top: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0; */
 }
