@@ -1,2 +1,3 @@
-# nbfahrinadi-web-portofolio
-study dan sebagai portofolio pribadi
+# nbfahrinadi-website
+
+Personal Website
