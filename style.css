@@ -108,90 +108,6 @@ a:active {
   padding: 0;
 }
 
-/* ========== MODAL ========== */
-
-.modal {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: auto;
-  padding: 20px;
-  backdrop-filter: blur(5px);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.modal.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 500px;
-  text-align: start;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.close-btn {
-  background-color: lightgrey;
-  color: white;
-  border: none;
-  padding: 0px 10px;
-  cursor: pointer;
-  border-radius: 100px;
-  font-size: 24px;
-  text-decoration: none; /* Hapus underline */
-}
-
-.close-btn:hover {
-  color: white; /* Tetap putih saat hover */
-  text-decoration: none; /* Pastikan tidak berubah */
-}
-
-.modal-list ul li {
-  text-decoration: none;
-  list-style: none;
-  padding: 10px;
-}
-
-.modal-list-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  text-decoration: none;
-}
-
-.modal-list-item a:hover {
-  color: black; /* Tetap putih saat hover */
-  text-decoration: none; /* Pastikan tidak berubah */
-}
-
-.modal-list-item img {
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  border: 2px solid black;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* transition: background 0.3s ease; */
-}
-
 /* ========== NAVBAR SECTION ========== */
 
 .navbar {
@@ -335,9 +251,9 @@ a:active {
 }
 
 .about .left-content {
-  /* width: 100%; */
+  width: 40%;
   display: flex;
-  width: 600px;
+  /* width: 600px; */
   flex-direction: column;
   gap: 40px; /* Jarak antar elemen di dalam konten kanan */
 }
@@ -470,7 +386,6 @@ a:active {
   width: 100%; /*agar full strech */
   padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
   scroll-margin-top: 100px; /*Agar tidak tertutup navbar*/
-  padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
   background-color: #000; /* hitam */
   text-align: center;
   color: #fff;
@@ -495,8 +410,9 @@ a:active {
 .tools-inner-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* gap: 60px; */
+  justify-content: flex;
+  align-items: flex-start;
+  gap: 60px;
 }
 
 .tool-card {
@@ -617,4 +533,223 @@ a:active {
   position: absolute;
   bottom: 0;
   left: 0; */
+}
+
+/* ========== MODAL ========== */
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  text-align: start;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background-color: lightgrey;
+  color: white;
+  border: none;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 100px;
+  font-size: 24px;
+  text-decoration: none; /* Hapus underline */
+}
+
+.close-btn:hover {
+  color: white; /* Tetap putih saat hover */
+  text-decoration: none; /* Pastikan tidak berubah */
+}
+
+.modal-list ul li {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+}
+
+.modal-list-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.modal-list-item a:hover {
+  color: black; /* Tetap putih saat hover */
+  text-decoration: none; /* Pastikan tidak berubah */
+}
+
+.modal-list-item img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: background 0.3s ease; */
+}
+
+/* Media Queries untuk 3 device umum: Desktop, Tablet, Mobile */
+
+/* ========== 1. Desktop (≥1025px) ========== */
+@media (min-width: 1025px) {
+  .project .inner-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project .card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ========== 2. Tablet (≥768px dan ≤1024px) ========== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar,
+  .hero,
+  .about,
+  .project,
+  .tools,
+  .footer {
+    padding: 40px 60px;
+  }
+
+  .navbar {
+    padding: 20px 60px;
+  }
+
+  .navbar .menubar li a {
+    padding: 10px 10px;
+  }
+
+  .hero .inner-wrapper,
+  .about .inner-wrapper,
+  .footer-inner-wrapper {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .project .inner-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .project .card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ========== 3. Mobile (≤767px) ========== */
+@media (max-width: 767px) {
+  .navbar,
+  .hero,
+  .about,
+  .project,
+  .tools,
+  .footer {
+    padding: 10px 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  } /* 32px */
+  h2 {
+    font-size: 1.75rem;
+  } /* 28px */
+  h3 {
+    font-size: 1.5rem;
+  } /* 24px */
+  h4 {
+    font-size: 1.25rem;
+  } /* 20px */
+  h5 {
+    font-size: 1.125rem;
+  } /* 18px */
+  h6 {
+    font-size: 1rem;
+  } /* 16px */
+  p {
+    font-size: 0.9375rem;
+  } /* 15px */
+
+  .logo img {
+    margin-right: 40px;
+  }
+
+  .navbar .menubar li a {
+    padding: 10px 10px;
+    font-size: 18px;
+  }
+
+  .cta-navbar a {
+    visibility: hidden;
+    font-size: 0px;
+  }
+
+  .hero .inner-wrapper,
+  .about .inner-wrapper,
+  .footer-inner-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project .inner-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .project .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  .about .left-content {
+    width: 100%;
+  }
+
+  .tools {
+    padding: 40px 30px;
+  }
+
+  .footer .modal {
+    padding: 100px 20px 20px 20px;
+  }
+
+  .modal-content {
+    width: 400px;
+  }
 }
