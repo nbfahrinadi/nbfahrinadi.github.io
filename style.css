@@ -634,7 +634,7 @@ a:active {
 }
 
 /* ========== 2. Tablet (≥768px dan ≤1024px) ========== */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
   .navbar,
   .hero,
   .about,
@@ -678,6 +678,8 @@ a:active {
   .tools,
   .footer {
     padding: 10px 30px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   h1 {
