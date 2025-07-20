@@ -714,7 +714,7 @@ a:active {
   }
 
   .cta-navbar a {
-    visibility: hidden;
+    display: none;
     font-size: 0px;
   }
 
@@ -753,5 +753,70 @@ a:active {
 
   .modal-content {
     width: 400px;
+  }
+}
+
+/* ========== 4. Extra Small (≤480px) ========== */
+@media (max-width: 480px) {
+  .navbar,
+  .hero,
+  .about,
+  .project,
+  .tools,
+  .footer {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  } /* 28px */
+  h2 {
+    font-size: 1.5rem;
+  } /* 24px */
+  h3 {
+    font-size: 1.25rem;
+  } /* 20px */
+  p {
+    font-size: 0.875rem;
+  } /* 14px */
+
+  .navbar .menubar li a {
+    padding: 10px 10px;
+    font-size: 18px;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .tools .tool-wrapper {
+    gap: 16px;
+  }
+
+  .tools .tool-card {
+    padding: 16px;
+  }
+
+  .footer .modal {
+    padding: 80px 16px 16px 16px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .menubar li a {
+    font-size: 16px;
+    padding: 8px 8px;
+  }
+
+  .cta-navbar a {
+    display: none;
   }
 }
