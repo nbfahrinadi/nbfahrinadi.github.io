@@ -753,7 +753,7 @@ a:active {
     padding: 40px 30px;
   }
 
-  .footer .modal {
+  .modal {
     padding: 100px 20px 20px 20px;
   }
 
@@ -840,8 +840,8 @@ a:active {
     padding: 40px 30px;
   }
 
-  .footer .modal {
-    padding: 100px 20px 20px 20px;
+  .modal {
+    padding: 120px 20px 20px 20px;
   }
 
   .modal-content {
@@ -892,7 +892,7 @@ a:active {
   }
 
   .footer .modal {
-    padding: 80px 16px 16px 16px;
+    padding: 100px 16px 16px 16px;
   }
 
   .navbar {
