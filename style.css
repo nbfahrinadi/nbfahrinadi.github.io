@@ -850,7 +850,7 @@ a:active {
 }
 
 /* ========== 3.2. Extra Small (≤360px) ========== */
-@media (max-width: 360px) {
+@media (min-width: 360px) {
   .navbar,
   .hero,
   .about,
