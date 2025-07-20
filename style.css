@@ -456,7 +456,7 @@ a:active {
   /* position: relative; Agar footer tetap di bawah konten */
 }
 
-.footer-inner-wrapper {
+.footer .inner-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -650,6 +650,21 @@ a:active {
     padding: 40px 60px;
   }
 
+  .hero .inner-wrapper,
+  .about .inner-wrapper,
+  .footer .inner-wrapper {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  } /* 32px */
+
+  .hero p {
+    font-size: 14px;
+  }
+
   .navbar {
     padding: 20px 60px;
   }
@@ -658,11 +673,10 @@ a:active {
     padding: 10px 10px;
   }
 
-  .hero .inner-wrapper,
-  .about .inner-wrapper,
-  .footer-inner-wrapper {
-    flex-direction: row;
-    gap: 60px;
+  .gambar img {
+    width: 100%; /* Ukuran gambar */
+    height: auto; /* Mempertahankan rasio aspek */
+    border-radius: 10px; /* Sudut melengkung */
   }
 
   .project .inner-wrapper {
@@ -676,181 +690,7 @@ a:active {
 }
 
 /* ========== 3. Mobile (≤767px) ========== */
-@media (min-width: 480px) and (max-width: 767px) {
-  .navbar,
-  .hero,
-  .about,
-  .project,
-  .tools,
-  .footer {
-    padding: 10px 30px;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    font-size: 2rem;
-  } /* 32px */
-  h2 {
-    font-size: 1.75rem;
-  } /* 28px */
-  h3 {
-    font-size: 1.5rem;
-  } /* 24px */
-  h4 {
-    font-size: 1.25rem;
-  } /* 20px */
-  h5 {
-    font-size: 1.125rem;
-  } /* 18px */
-  h6 {
-    font-size: 1rem;
-  } /* 16px */
-  p {
-    font-size: 0.9375rem;
-  } /* 15px */
-
-  .logo img {
-    margin-right: 40px;
-  }
-
-  .navbar .menubar li a {
-    padding: 10px 10px;
-    font-size: 18px;
-  }
-
-  .cta-navbar a {
-    display: none;
-    font-size: 0px;
-  }
-
-  .hero .inner-wrapper,
-  .about .inner-wrapper,
-  .footer-inner-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .project .inner-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .project .card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .thumbnail {
-    width: 100%;
-    height: auto;
-  }
-
-  .about .left-content {
-    width: 100%;
-  }
-
-  .tools {
-    padding: 40px 30px;
-  }
-
-  .modal {
-    padding: 100px 20px 20px 20px;
-  }
-
-  .modal-content {
-    width: 400px;
-  }
-}
-
-/* ========== 3.1. Mobile small (≤480px) ========== */
-@media (min-width: 360px) and (max-width: 480px) {
-  .navbar,
-  .hero,
-  .about,
-  .project,
-  .tools,
-  .footer {
-    padding: 10px 30px;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    font-size: 2rem;
-  } /* 32px */
-  h2 {
-    font-size: 1.75rem;
-  } /* 28px */
-  h3 {
-    font-size: 1.5rem;
-  } /* 24px */
-  h4 {
-    font-size: 1.25rem;
-  } /* 20px */
-  h5 {
-    font-size: 1.125rem;
-  } /* 18px */
-  h6 {
-    font-size: 1rem;
-  } /* 16px */
-  p {
-    font-size: 0.9375rem;
-  } /* 15px */
-
-  .logo img {
-    margin-right: 40px;
-  }
-
-  .navbar .menubar li a {
-    padding: 10px 10px;
-    font-size: 18px;
-  }
-
-  .cta-navbar a {
-    display: none;
-    font-size: 0px;
-  }
-
-  .hero .inner-wrapper,
-  .about .inner-wrapper,
-  .footer-inner-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .project .inner-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .project .card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .thumbnail {
-    width: 100%;
-    height: auto;
-  }
-
-  .about .left-content {
-    width: 100%;
-  }
-
-  .tools {
-    padding: 40px 30px;
-  }
-
-  .modal {
-    padding: 120px 20px 20px 20px;
-  }
-
-  .modal-content {
-    width: 400px;
-  }
-}
-
-/* ========== 3.2. Extra Small (≤360px) ========== */
-@media (max-width: 360px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .navbar,
   .hero,
   .about,
@@ -858,60 +698,62 @@ a:active {
   .tools,
   .footer {
     padding: 40px 20px;
+    overflow-x: hidden;
+  }
+
+  .hero .inner-wrapper,
+  .about .inner-wrapper,
+  .footer .inner-wrapper {
+    flex-direction: column;
+    gap: 40px;
   }
 
   h1 {
+    font-size: 2rem;
+  } /* 32px */
+  h2 {
     font-size: 1.75rem;
   } /* 28px */
-  h2 {
+  h3 {
     font-size: 1.5rem;
   } /* 24px */
-  h3 {
+  h4 {
     font-size: 1.25rem;
   } /* 20px */
+  h5 {
+    font-size: 1.125rem;
+  } /* 18px */
+  h6 {
+    font-size: 1rem;
+  } /* 16px */
   p {
-    font-size: 0.875rem;
-  } /* 14px */
-
-  .thumbnail {
-    width: 100%;
-    height: auto;
-  }
-
-  .modal-content {
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .tools .tool-wrapper {
-    gap: 16px;
-  }
-
-  .tools .tool-card {
-    padding: 16px;
-  }
-
-  .footer .modal {
-    padding: 100px 16px 16px 16px;
-  }
+    font-size: 0.9375rem;
+  } /* 15px */
 
   .navbar {
     padding: 10px 20px;
   }
 
   .logo img {
-    width: 40px; /* Ukuran logo lebih kecil */
-    height: auto; /* Mempertahankan rasio aspek */
-    margin-right: 20px;
+    margin-right: 10px;
+    height: 40px;
+    width: auto;
   }
 
   .navbar .menubar li a {
-    font-size: 14px;
-    padding: 8px 8px;
+    padding: 10px 8px;
+    font-size: 12px;
   }
 
   .cta-navbar a {
     display: none;
+  }
+
+  .hero .left-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Jarak antar elemen di dalam konten kiri */
   }
 
   .gambar img {
@@ -920,23 +762,73 @@ a:active {
     border-radius: 10px; /* Sudut melengkung */
   }
 
+  .about .left-content {
+    width: 100%;
+  }
+
+  .project .inner-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .project .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  .more-detail {
+    margin-top: 60px;
+  }
+
+  .tools {
+    padding: 40px 20px;
+  }
+
   .tools-inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex;
+    align-items: flex-start;
     gap: 40px;
   }
 
   .tool-card {
-    width: 140px;
-    height: 140px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .tool-card:hover {
+    transform: scale(1.05);
   }
 
   .tool-card img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 80px;
+    max-height: auto;
+    object-fit: contain;
   }
 
   .footer-nav ul {
     flex-direction: row;
     align-items: center; /* Rata tengah */
     gap: 20px; /* Jarak antar elemen */
+  }
+
+  .modal {
+    padding: 100px 20px 20px 20px;
+  }
+
+  .modal-content {
+    width: 400px;
   }
 }
