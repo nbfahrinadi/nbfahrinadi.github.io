@@ -762,7 +762,7 @@ a:active {
   }
 }
 
-/* ========== 4. Mobile small (≤480px) ========== */
+/* ========== 3.1. Mobile small (≤480px) ========== */
 @media (min-width: 360px) and (max-width: 480px) {
   .navbar,
   .hero,
@@ -849,7 +849,7 @@ a:active {
   }
 }
 
-/* ========== 4. Extra Small (≤360px) ========== */
+/* ========== 3.2. Extra Small (≤360px) ========== */
 @media (max-width: 360px) {
   .navbar,
   .hero,
