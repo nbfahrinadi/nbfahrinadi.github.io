@@ -232,6 +232,12 @@ a:active {
   color: black; /* Teks putih saat dihover */
 }
 
+.gambar img {
+  width: 400px; /* Ukuran gambar */
+  height: auto; /* Mempertahankan rasio aspek */
+  border-radius: 10px; /* Sudut melengkung */
+}
+
 /* ========== ABOUT SECTION ========== */
 
 .about {
@@ -670,7 +676,7 @@ a:active {
 }
 
 /* ========== 3. Mobile (≤767px) ========== */
-@media (max-width: 767px) {
+@media (min-width: 360px) and (max-width: 767px) {
   .navbar,
   .hero,
   .about,
@@ -757,7 +763,7 @@ a:active {
 }
 
 /* ========== 4. Extra Small (≤480px) ========== */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
   .navbar,
   .hero,
   .about,
@@ -779,11 +785,6 @@ a:active {
   p {
     font-size: 0.875rem;
   } /* 14px */
-
-  .navbar .menubar li a {
-    padding: 10px 10px;
-    font-size: 18px;
-  }
 
   .thumbnail {
     width: 100%;
@@ -811,12 +812,44 @@ a:active {
     padding: 10px 20px;
   }
 
+  .logo img {
+    width: 40px; /* Ukuran logo lebih kecil */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-right: 20px;
+  }
+
   .navbar .menubar li a {
-    font-size: 16px;
+    font-size: 14px;
     padding: 8px 8px;
   }
 
   .cta-navbar a {
     display: none;
+  }
+
+  .gambar img {
+    width: 100%; /* Ukuran gambar */
+    height: auto; /* Mempertahankan rasio aspek */
+    border-radius: 10px; /* Sudut melengkung */
+  }
+
+  .tools-inner-wrapper {
+    gap: 40px;
+  }
+
+  .tool-card {
+    width: 140px;
+    height: 140px;
+  }
+
+  .tool-card img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .footer-nav ul {
+    flex-direction: row;
+    align-items: center; /* Rata tengah */
+    gap: 20px; /* Jarak antar elemen */
   }
 }
