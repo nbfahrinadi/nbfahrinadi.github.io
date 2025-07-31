@@ -5,7 +5,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: transparent;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Jost", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -88,10 +89,11 @@ a:active {
   text-overflow: ellipsis; /* Tambahkan "..." */
 }
 
-.underline-black {
+.underline-white {
   width: 120px;
   height: 4px;
   background-color: black;
+  background-color: white;
   margin: 10px 0;
   border-radius: 50px; /* Sudut melengkung */
 }
@@ -112,12 +114,12 @@ a:active {
 
 .navbar {
   width: 100%;
-  padding: 20px 100px; /* Padding untuk ruang di kiri dan kanan */
+  padding: 10px 100px; /* Padding untuk ruang di kiri dan kanan */
   position: sticky; /* Agar navbar tetap di atas saat scroll */
   top: 0; /* Posisi tetap di atas */
   z-index: 1000; /* Biar tetap di atas elemen lain */
   transition: box-shadow 0.3s ease; /* Transisi halus untuk bayangan */
-  background-color: white; /* Warna latar belakang putih */
+  background-color: black; /* Warna latar belakang putih */
 }
 
 .navbar.scrolled {
@@ -151,7 +153,7 @@ a:active {
 }
 
 .navbar .menubar li a:hover {
-  color: black; /*berubah jika dihover*/
+  color: white; /*berubah jika dihover*/
   font-weight: 600; /* Menebalkan teks saat dihover */
   transition: all 0.5s ease; /* Transisi halus */
 }
@@ -176,54 +178,88 @@ a:active {
 /* ========== HERO SECTION ========== */
 
 .hero {
-  width: 100%;
-  padding: 60px 100px; /* Padding untuk ruang di kiri dan kanan */
-  scroll-margin-top: 100px;
-}
-
-.hero .inner-wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: start;
-  gap: 140px; /* Jarak antar elemen */
+  padding: 5rem 8%;
+  /* height: 100vh; */
+  height: 600px;
+  gap: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+  background-image: url("asset/bg-hero.png");
+  background-color: black;
 }
 
-.hero .left-content {
+.hero-left {
+  flex: 1;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-left h2 {
+  color: #888;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+}
+
+/* .hero-image {
+  flex: 1;
+  max-width: 400px;
+  animation: fadeIn 1.8s ease;
+}
+
+.hero-image img {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Jarak antar elemen di dalam konten kiri */
+  filter: grayscale(100%);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+} */
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
 }
 
-.big-title {
-  /* Tebal */
-  /* line-height: 1.2; Jarak antar baris */
-  color: black; /* Warna teks hitam */
+.hero-right {
+  flex: 2;
+  max-width: 600px;
+  animation: fadeInRight 1.2s ease;
 }
 
-.big-title strong {
-  font-weight: 800; /* bold untuk nama */
+.hero-right h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: white;
 }
 
-.big-title .bold {
-  font-weight: 800; /* lebih bold dari teks biasa */
-}
-
-.description {
-  font-size: 20px; /* Ukuran font deskripsi */
-  color: gray; /* Warna teks abu-abu */
-  margin-top: 10px; /* Jarak atas */
+.hero-right p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .cta-hero a {
   display: inline-block; /* Membuat link sebagai blok */
   padding: 20px 40px;
   font-weight: 600; /* Padding untuk tombol */
-  background-color: black; /* Warna putih */
+  background-color: #292a2c; /* Warna putih */
   color: white; /* Teks hitam */
   text-decoration: none; /* Menghapus garis bawah */
   border-radius: 10px; /* Sudut melengkung */
-  border: 2px solid black;
+  border: 2px solid #292a2c;
   transition: background-color 0.3s ease; /* Transisi halus */
 }
 
@@ -232,10 +268,38 @@ a:active {
   color: black; /* Teks putih saat dihover */
 }
 
-.gambar img {
-  width: 400px; /* Ukuran gambar */
-  height: auto; /* Mempertahankan rasio aspek */
-  border-radius: 10px; /* Sudut melengkung */
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 /* ========== ABOUT SECTION ========== */
@@ -243,13 +307,12 @@ a:active {
 .about {
   width: 100%;
   padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
-  background-color: black;
+  background-color: #292a2c;
   color: white;
   scroll-margin-top: 100px;
 }
 
 .about .inner-wrapper {
-  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -450,6 +513,7 @@ a:active {
   padding: 100px 100px; /* Padding untuk ruang di kiri dan kanan */
   display: flex;
   flex-direction: column;
+  background-color: #292a2c;
   gap: 40px; /* Jarak antar elemen */
   /* display: flex; */
   /* align-items: flex-start; Rata kiri */
@@ -467,12 +531,14 @@ a:active {
 
 .footer-left {
   width: 100%;
+  color: white;
 }
 
 .footer-title .underline {
   width: 120px;
   height: 4px;
-  background-color: black;
+  /* background-color: black; */
+  background-color: white;
   margin-bottom: 30px;
   margin-left: 0; /* biar tetap rata kiri */
   border-radius: 50px; /* Sudut melengkung */
@@ -482,12 +548,14 @@ a:active {
 .footer .social-icons {
   display: flex;
   gap: 15px;
+  /* color: white; */
 }
 
 .footer .social-icons a {
   width: 35px;
   height: 35px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 2px solid white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -499,6 +567,9 @@ a:active {
   width: 20px;
   height: 20px;
   transition: transform 0.5s ease;
+  color: white;
+  filter: invert(1);
+  /* filter: grayscale(1) brightness(1.5) opacity(0.8); */
 }
 
 .footer .social-icons a:hover {
@@ -510,28 +581,32 @@ a:active {
   display: flex;
   gap: 40px;
   list-style: none;
+  color: white;
 }
 
 .footer-nav a {
   text-decoration: none;
-  color: #555;
+  color: white;
   font-weight: 500;
 }
 
 .footer-nav a a:hover {
-  color: black; /*berubah jika dihover*/
+  color: #555; /*berubah jika dihover*/
   font-weight: 600; /* Menebalkan teks saat dihover */
   transition: all 0.5s ease; /* Transisi halus */
 }
 
 .footer-nav a:hover {
-  color: black;
+  /* color: black; */
+  color: #525557; /*berubah jika dihover*/
 }
 
 .footer-divider {
   width: 100%;
   height: 5px;
-  background-color: black;
+  /* background-color: black; */
+  background-color: white;
+  background-color: #525557;
   /* border: none;
   border-top: 2px solid black;
   margin-top: 30px;
@@ -706,6 +781,8 @@ a:active {
   .footer .inner-wrapper {
     flex-direction: column;
     gap: 40px;
+    background-position: top center;
+    background-size: contain; /* atau cover */
   }
 
   h1 {
@@ -755,6 +832,17 @@ a:active {
     flex-direction: column;
     gap: 20px; /* Jarak antar elemen di dalam konten kiri */
   }
+
+  .hero-right p {
+    color: #7c7f83;
+    /* text-shadow: -0.8px -0.8px 0 #7c7f83, 0.8px -0.8px 0 #7c7f83,
+      -0.8px 0.8px 0 #7c7f83, 0.8px 0.8px 0 #7c7f83; */
+  }
+  /* .hero-right p {
+    color: black;
+    text-shadow: -0.8px -0.8px 0 #7c7f83, 0.8px -0.8px 0 #7c7f83,
+      -0.8px 0.8px 0 #7c7f83, 0.8px 0.8px 0 #7c7f83;
+  } */
 
   .gambar img {
     width: 100%; /* Ukuran gambar */

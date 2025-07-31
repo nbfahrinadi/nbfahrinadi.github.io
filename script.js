@@ -38,3 +38,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
+document.getElementById("contactBtn").addEventListener("click", () => {
+  alert("Opening contact modal or redirect...");
+});
+
